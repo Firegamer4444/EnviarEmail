@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<GridPane fx:id="root" hgap="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" vgap="5.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/22">
+  <columnConstraints>
+    <ColumnConstraints hgrow="NEVER" minWidth="10.0" prefWidth="125.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="120.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="90.0" />
+      <ColumnConstraints hgrow="NEVER" minWidth="10.0" prefWidth="80.0" />
+    <ColumnConstraints hgrow="NEVER" minWidth="10.0" prefWidth="60.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <TextArea fx:id="mensajeText" prefHeight="200.0" prefWidth="200.0" promptText="Mensaje" GridPane.columnSpan="5" GridPane.rowIndex="5" />
+      <Label alignment="CENTER_RIGHT" maxWidth="1.7976931348623157E308" text="Servidor SMTP:" />
+      <Label alignment="CENTER_RIGHT" maxWidth="1.7976931348623157E308" text="Usar conexión SSL:" GridPane.rowIndex="1" />
+      <Label alignment="CENTER_RIGHT" maxWidth="1.7976931348623157E308" text="Remitente (From):" GridPane.rowIndex="2" />
+      <Label alignment="CENTER_RIGHT" maxWidth="1.7976931348623157E308" text="Destinatario (To):" GridPane.rowIndex="3" />
+      <Label alignment="CENTER_RIGHT" maxWidth="1.7976931348623157E308" text="Asunto (Subject):" GridPane.rowIndex="4" />
+      <TextField fx:id="nombreIpText" promptText="Nombre o IP del servidor" GridPane.columnIndex="1" GridPane.columnSpan="3">
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+      </TextField>
+      <TextField fx:id="puertoText" promptText="Puerto" GridPane.columnIndex="4" />
+      <CheckBox fx:id="conexionCheckBox" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <TextField fx:id="emailFrText" promptText="Email del remitente" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+      <TextField fx:id="emailToText" promptText="Email del destinatario" GridPane.columnIndex="1" GridPane.columnSpan="4" GridPane.rowIndex="3" />
+      <TextField fx:id="asuntoText" promptText="Asunto del mensaje" GridPane.columnIndex="1" GridPane.columnSpan="4" GridPane.rowIndex="4" />
+      <VBox prefWidth="100.0" GridPane.columnIndex="5" GridPane.rowSpan="3">
+         <children>
+            <VBox alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="100.0" spacing="5.0">
+               <children>
+                  <Button defaultButton="true" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onEnviarAction" text="Enviar" />
+                  <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onVaciarAction" text="Vaciar" />
+                  <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onCerrarAction" text="Cerrar" />
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+      <PasswordField fx:id="passwordText" promptText="Contraseña" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</GridPane>
