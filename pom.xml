@@ -11,7 +11,10 @@
   <url>http://maven.apache.org</url>
 
   <properties>
+    <maven.compiler.target>22</maven.compiler.target>
+    <maven.compiler.source>22</maven.compiler.source>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <exec.mainClass>dad.enviaremail.Main</exec.mainClass>
   </properties>
 
   <dependencies>
@@ -30,6 +33,11 @@
       <groupId>org.openjfx</groupId>
       <artifactId>javafx-fxml</artifactId>
       <version>22.0.1</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-email</artifactId>
+      <version>1.5</version>
     </dependency>
   </dependencies>
 </project>
